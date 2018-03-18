@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>Connect 4</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Connect 4</h1>
+      <div v-show="!inGame">
+        <div class="gameSetup">
+          <h4>Start A Game!</h4>
+          <label>Player One</label>
+          <input type="text" v-model="playerOne">
+          <label> Player Two </label>
+          <input type="text" v-model="playerTwo">
+          <button v-on:click="startGame()">Start Game</button>
+        </div>
+        <div class ="leaderBoard">
+          <h3>Leader Board</h3>
+          <button v-on:click="clearLeader()">Clear Leader Board</button>
+          <ul>
+            <li class="title">
+              <label>Name</label>
+              <label>Number of Wins</label>
+            </li>
+            <li v-for="item in leaders">
+              <label>{{ item.name }}</label>
+              <label>{{ item.score }}</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <div v-show="inGame">
+      <div class="players">
+        <h4>Player One: {{playerOne}} is Red</h4>
+        <h4>Player Two: {{playerTwo}} is Yellow</h4>
+      </div>
+      <h3 class="turn">{{turn}}'s Turn! </h3>
+      <div class="board">
+          <div v-for="square in board" v-on:click="handleClick(square.id)" class="grid-item">
+            <div v-show="square.owner===1"><img class="image" src="redish.jpg"/></div>
+            <div v-show="square.owner===2"><img class="image" src="yellow.jpg"></div>
+          </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+  <footer>
+    <div class="github">
+      <a href="https://github.com/raebengo/tictactoe">Source Code</a>
+    </div>
+  </footer>
+</html>

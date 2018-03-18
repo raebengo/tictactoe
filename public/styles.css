@@ -1,0 +1,152 @@
+body{
+  background-color: #7CD8D5;
+}
+.board{
+    grid-template-columns: auto auto auto auto auto auto auto;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-column-gap:2px;
+    margin:0 auto;
+    width:565px;
+    margin-bottom: 8em;
+}
+
+.grid-item{
+    height:75px;
+    width:75px;
+    background-color: #02C8A7;
+}
+
+.image {
+  height:75px;
+  width:75px;
+  background-color: white;
+}
+
+h3{
+  text-align: center;
+  font-family: "Bookman", sans-serif;
+  color: white;
+  font-size: 1.5em;
+  padding: 1em 0em 0.5em 0em;
+  border-bottom: 5px solid #F9BE02;
+  margin-bottom: 0em;
+}
+
+ h1{
+   font-size: 3em;
+   font-family: "Bookman", sans-serif;
+   color: white;
+   margin: 0;
+   text-align: center;
+   margin-bottom: 0.5em;
+ }
+
+ h4{
+   color: white;
+   font-family: "Bookman", sans-serif;
+   text-align: center;
+ }
+
+label{
+   color: white;
+   font-family: "Bookman", sans-serif;
+   text-align: center;
+   padding:0.4em;
+ }
+
+ul{
+  padding:0em;
+  margin:0em;
+}
+
+ li{
+   background-color: #D7F3F2;
+   padding:1em;
+   font-family: "Bookman", sans-serif;
+   font-size: 1em;
+   list-style-type: none;
+   margin: 0.2em;
+ }
+
+ li label{
+   margin-right: 12em;
+   color: black;
+
+ }
+
+.leaderBoard{
+    background-color: #02C8A7;
+    padding: 0;
+    width:30em;
+    margin: 0 auto;
+    padding-bottom:0.2em;
+}
+ .title{
+   background-color: #02C8A7;
+   font-weight:bold;
+ }
+
+ .gameSetup{
+    width: 29em;
+    margin: 0 auto;
+    padding: .5em;
+    background-color: #F53240;
+ }
+
+ input{
+    width: 10em;
+    height: 2em;
+    border-radius: .5em;
+ }
+
+ button{
+  font-family: "Bookman", sans-serif;
+  font-weight: bold;
+  padding: 0.75em;
+  border-radius: 7px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  margin-top: 2.5em;
+  margin-left: 17em;
+ }
+
+.players{
+  width: 12.5em;
+  background-color: #F53240;
+  padding: .3em;
+}
+
+.players h4{
+    text-align:left;
+}
+
+.turn{
+  width: 650px;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  padding: 0.2em;
+}
+
+footer {
+  width: 100%;
+  height: 3em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #F9BE02;
+  margin-top: 2em;
+}
+
+.github{
+  padding:1em;
+  float:right;
+}
+
+a{
+  text-decoration: none;
+  font-family: "Bookman", sans-serif;
+  font-size: .9em;
+  color: white;
+}
